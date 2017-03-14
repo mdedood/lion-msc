@@ -121,6 +121,7 @@ The files included with this package are the following:
 \textbf{logo-leidenuniv.pdf} & PDF file with logo of Leiden University. \\
                              & This file is required by the document class \\
 \textbf{lion-msc.bst}        & bibliography style file that can be used with bibtex \\
+\textbf{lion-msc.layout}     & layout file used for integration with LyX environment \\
 \textbf{minimal.tex}         & Minimal \LaTeX file demonstrating the use of \\
                              & lion-msc.cls \\
 \textbf{AlexanderPRA.tex}    & \LaTeX file used as an example of a Master Thesis \\
@@ -151,7 +152,7 @@ Lion-msc inherits and passes its options to the report class. By default the cla
 \hline
 \end{tabular}
 
-\subsection{lion-msc commands}
+\subsection{Specific lion-msc commands}
 
 With the lion-msc documentclass most of the required information is entered in the preamble of the \LaTeX document (i.e. before $\backslash$begin\{document\}). This information is made visible by using the $\backslash$maketitle command. This should be the first command after $\backslash$begin\{document\}.
 
@@ -219,6 +220,52 @@ It can be quite useful to have multiple figures next to each other. This can be 
 \usepackage[labelformat=simple,justification=centering]{subcaption}
 \renewcommand\thesubfigure{(\alph{subfigure})}
 \end{verbatim}
+
+\subsubsection{Typesetting of units}
+
+Some people rely on a package called 'siunitx' to deal with the correct typesetting of units in the SI system. The following commands could be added 
+to the document preamble. (Suggestion by Casper Remeijer)
+
+\begin{verbatim}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty = true, multi-part-units = single, inter-unit-product = \ensuremath { { } \cdot { } }} 
+    % use \pm symbol for uncertainty values, don't repeat the unit, unit multiplication is indicated by means of a half-height dot
+\end{verbatim}
+
+\subsubsection{Indentation of paragraphs}
+
+Some people do not like the standard LaTeX indentation at the beginning of the paragraph. This can be changed using the parskip package
+
+\begin{verbatim}
+\usepackage{parskip}
+\end{verbatim}
+
+\section{Using LyX}
+
+Some people like to use LyX as an editor because of its graphical features. I do not recommend this. The LyX files are not LaTeX and 
+can only be edited and maintained by coworkers if they also install and use LyX. Conversion from LaTeX to LyX is possible, the inverse 
+is not always successful. This may cost you a lot of time when you need to submit an article to a journal that want to have a LaTeX document.
+
+\subsection{Installation}
+
+In order to use the lion-msc style in LyX, the latex style should be installed systemwide. On my system I have to copy the
+\emph{lion-msc.cls} and \emph{logo-leidenuniv.pdf} file to: 
+
+\begin{verbatim} 
+$HOME/texmf/tex/latex/lion-msc
+\end{verbatim}
+And the \emph{lion-msc.bst} file to
+\begin{verbatim}
+$HOME/texmf/bibtex/bst/lion-msc
+\end{verbatim}
+
+For more information see:
+Help $\rhd$ Customization $\rhd$ Chapt5
+
+The next thing to do is to set the document class to a local layout and choose for the
+\emph{lion-msc.layout}  file:
+
+Documents $\rhd$ Settings $\rhd$ Document Class $\rhd$ Local-layout
 
 \include{AlexanderPRA}
 

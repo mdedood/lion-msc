@@ -82,14 +82,23 @@
 % be the default option. In particular the 12pt option...
 
 \PassOptionsToClass{a4paper}{report}
-%\PassOptionsToClass{12pt}{report}
 \PassOptionsToClass{fleqn}{report}
 \PassOptionsToClass{openright}{report}
 
+% 14-03-2017 Michiel de Dood
+% PassOptionsToClass or ExecuteOptions forces the 12 pt font size onto the
+% user. This is unintended behavior, but the report class uses 10 pt font
+% as a default, which is fairly small font
+% http://tex.stackexchange.com/questions/40893/how-to-set-default-font-size-in-latex-cls-file
+
+\def\@@ptsize{12pt}
+\DeclareOption{10pt}{\def\@@ptsize{10pt}}
+\DeclareOption{11pt}{\def\@@ptsize{11pt}}
+\DeclareOption{12pt}{\def\@@ptsize{12pt}}
+
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{report}}
-\ExecuteOptions{12pt}
 \ProcessOptions\relax
-\LoadClass{report}
+\LoadClass[\@@ptsize]{report}
 
 % == continue : draft and final options
 \def\baselinestretch{\mystretch}	% This sets the line spacing
