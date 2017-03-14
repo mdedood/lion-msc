@@ -48,9 +48,9 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2016/06/09 v0.25]
+\ProvidesClass{lion-msc}[2017/03/14 v0.26]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.25}
+\typeout{Leiden Institute of Physics thesis class - version 0.26}
 \typeout{}
 \typeout{Copyright (c) 2014 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
