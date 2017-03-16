@@ -26,7 +26,7 @@
 %\major{Physics and Mathematics}
 
 % optional cover picture - should be jpg or pdf
-\coverpicture{\includegraphics[width=13cm]{thesisstyle.jpg}}
+\coverpicture{\includegraphics[width=13cm]{thesisstyle.png}}
 
 % Use this to make hyperlinks visible in the document.
 % \hypersetup{colorlinks=true}
@@ -242,28 +242,14 @@ Some people do not like the standard LaTeX indentation at the beginning of the p
 
 \section{Using LyX}
 
-Some people like to use LyX as an editor because of its graphical features. I do not recommend this. The LyX files are not LaTeX and 
-can only be edited and maintained by coworkers if they also install and use LyX. Conversion from LaTeX to LyX is possible, the inverse 
-is not always successful. This may cost you a lot of time when you need to submit an article to a journal that want to have a LaTeX document.
+Lyx is a powerfull visual editor that used LateX for typesetting. It exports .tex files that can be submitted to journals. Specifically the visual formula editor is very usefull. It also support track-changes, which is very usefull when collaborating. Some people do not like LyX.
 
 \subsection{Installation}
 
-In order to use the lion-msc style in LyX, the latex style should be installed systemwide. On my system I have to copy the
-\emph{lion-msc.cls} and \emph{logo-leidenuniv.pdf} file to: 
-
-\begin{verbatim} 
-$HOME/texmf/tex/latex/lion-msc
-\end{verbatim}
-And the \emph{lion-msc.bst} file to
-\begin{verbatim}
-$HOME/texmf/bibtex/bst/lion-msc
-\end{verbatim}
-
-For more information see:
-Help $\rhd$ Customization $\rhd$ Chapt5
+In order to use the lion-msc style in LyX, the latex style should be installed systemwide. With miktex this is done automatically. Now identify the lion-msc.layout file. It might be located at "c:{\textbackslash}program files{\textbackslash}miktex{\textbackslash}doc{\textbackslash}lion-msc".
 
 The next thing to do is to set the document class to a local layout and choose for the
-\emph{lion-msc.layout}  file:
+\emph{lion-msc.layout} file:
 
 Documents $\rhd$ Settings $\rhd$ Document Class $\rhd$ Local-layout
 

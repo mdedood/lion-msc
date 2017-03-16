@@ -76,8 +76,12 @@ Style Coverpicture
 	LabelString		"CoverPicture (optional):"
 End
 
+Style OtherFrontmatter
+    CopyStyle		Author
+	LatexName		""
+	LabelString		"Other frontmatter (optional, explicitely use LateX):"
+End
 
 Preamble
-\bibliographystyle{lion-msc}
 EndPreamble
 
