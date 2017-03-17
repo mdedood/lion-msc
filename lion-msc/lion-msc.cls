@@ -48,7 +48,7 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2017/03/16 v0.27]
+\ProvidesClass{lion-msc}[2017/03/17 v0.27]
 \typeout{}
 \typeout{Leiden Institute of Physics thesis class - version 0.27}
 \typeout{}
@@ -217,7 +217,7 @@
     \begin{center}
         \color{lionblue}
         \vskip 1em
-        \includegraphics[width=2.5cm]{logo_leidenuniv.pdf}
+        \includegraphics[width=2.5cm]{lion-msc-logo.pdf}
         \color{lionblue}
         \noindent\rule{\textwidth}{0.4mm}
         \vskip 0.5em
