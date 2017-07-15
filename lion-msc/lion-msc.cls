@@ -48,9 +48,9 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2017/03/17 v0.27]
+\ProvidesClass{lion-msc}[2017/07/15 v0.28]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.27}
+\typeout{Leiden Institute of Physics thesis class - version 0.28}
 \typeout{}
 \typeout{Copyright (c) 2014 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
@@ -76,7 +76,7 @@
 % A Master or Bachelor thesis is very similar to a report. The report class
 % is a basic class that should be compatible with many options
 
-\typeout{loading report class}
+\typeout{Loading report class}
 
 % Suspicious code. I cannot overule any of these values that are intended to
 % be the default option. In particular the 12pt option...
@@ -225,6 +225,7 @@
 }
 
 \posttitle{
+        \vskip -0.2em
         \noindent\rule{\textwidth}{0.4mm}
         \vfill
         \ifcover@picture
@@ -385,7 +386,7 @@
 \addtolength{\headheight}{2.5pt}
 \fancypagestyle{plain}{%
     \fancyhead{}
-    \renewcommand{\footrulewidth}{0pt}
+    \renewcommand{\footrulewidth}{1pt}
     \renewcommand{\headrulewidth}{0pt}
 }
 % == end   : definition of headers
