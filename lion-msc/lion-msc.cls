@@ -250,7 +250,7 @@
             Author :             \hfill {\@author} \\
             Student ID :         \hfill {\@studentid} \\
             Supervisor :         \hfill {\@supervisor} \\
-            2$^{nd}$ corrector : \hfill {\@corrector}
+            2\textsuperscript{nd} corrector : \hfill {\@corrector}
             \par
             \vskip 1em
             Leiden, The Netherlands, \@date
