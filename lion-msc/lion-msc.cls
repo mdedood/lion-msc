@@ -296,16 +296,16 @@
 
 % Changed the alignment of the abstract. The centering is plain ugly
 % Following comments of Casper Remeijer
-\postdate{
-    \end{center}
-    \begin{center}
-    \vskip 1 em
-    \color{black} \large \textbf{Abstract} \\
-                \vskip 1em
-                \normalsize \@abstract
-    \end{center}
-    \vfill
-}
+%\postdate{
+%    \end{center}
+%    \begin{center}
+%    \vskip 1 em
+%    \color{black} \large \textbf{Abstract} \\
+%                \vskip 1em
+%                \normalsize \@abstract
+%    \end{center}
+%    \vfill
+%}
 % == end   : title page using titling package
 
 % == start : pagesize commands
