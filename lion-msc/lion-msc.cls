@@ -48,9 +48,9 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2017/07/15 v0.28]
+\ProvidesClass{lion-msc}[2017/03/17 v0.27]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.28}
+\typeout{Leiden Institute of Physics thesis class - version 0.27}
 \typeout{}
 \typeout{Copyright (c) 2014 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
@@ -76,7 +76,7 @@
 % A Master or Bachelor thesis is very similar to a report. The report class
 % is a basic class that should be compatible with many options
 
-\typeout{Loading report class}
+\typeout{loading report class}
 
 % Suspicious code. I cannot overule any of these values that are intended to
 % be the default option. In particular the 12pt option...
@@ -141,7 +141,10 @@
 \RequirePackage[margin=0cm,font={small,sl},labelfont={bf,sl},tableposition=top,singlelinecheck=false,hypcap]{caption}
 
 % Use US english (default) hyphenation rules and provide dutch as an option
-\RequirePackage[dutch,USenglish]{babel}
+% 14/05/2019 The USenglish as an option started generating errors. 
+%            changed the option to english instead hoping for more
+%            stable behavior (M.J.A. de Dood)
+\RequirePackage[dutch,english]{babel}
 
 % For standard formatting of dates I use the datetime package
 % It is important to load this package AFTER the babel package
@@ -206,6 +209,11 @@
 % New if construct:             Default condition:
 \newif\ifcover@picture          \cover@picturefalse
 
+% Optional dedication added 14-05-2019. Requested by Ruoyan Wang
+% use \dedicate to define
+\def\dedicate#1{\gdef\@dedicate{#1}\dedicationtrue}
+% default option is off
+\newif\ifdedication				\dedicationfalse
 
 % == start : title page using titling package
 
@@ -225,7 +233,6 @@
 }
 
 \posttitle{
-        \vskip -0.2em
         \noindent\rule{\textwidth}{0.4mm}
         \vfill
         \ifcover@picture
@@ -250,7 +257,7 @@
             Author :             \hfill {\@author} \\
             Student ID :         \hfill {\@studentid} \\
             Supervisor :         \hfill {\@supervisor} \\
-            2\textsuperscript{nd} corrector : \hfill {\@corrector}
+            2$^{nd}$ corrector : \hfill {\@corrector}
             \par
             \vskip 1em
             Leiden, The Netherlands, \@date
@@ -283,6 +290,9 @@
         \normalsize
 }
 
+% Changed the alignment of the abstract. The centering is plain ugly
+% Following comments of Casper Remeijer
+
 \postdate{
     \end{center}
     \begin{center}
@@ -292,20 +302,15 @@
     \vskip 1em
     \normalsize \@abstract
     \vfill
+	\ifdedication
+		 \clearpage
+	     \thispagestyle{empty}
+	     \vskip 3em
+	     \textit{\@dedicate}    
+	\fi
 }
 
-% Changed the alignment of the abstract. The centering is plain ugly
-% Following comments of Casper Remeijer
-%\postdate{
-%    \end{center}
-%    \begin{center}
-%    \vskip 1 em
-%    \color{black} \large \textbf{Abstract} \\
-%                \vskip 1em
-%                \normalsize \@abstract
-%    \end{center}
-%    \vfill
-%}
+
 % == end   : title page using titling package
 
 % == start : pagesize commands
@@ -386,7 +391,7 @@
 \addtolength{\headheight}{2.5pt}
 \fancypagestyle{plain}{%
     \fancyhead{}
-    \renewcommand{\footrulewidth}{1pt}
+    \renewcommand{\footrulewidth}{0pt}
     \renewcommand{\headrulewidth}{0pt}
 }
 % == end   : definition of headers
