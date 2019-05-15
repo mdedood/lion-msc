@@ -48,9 +48,9 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2017/03/17 v0.27]
+\ProvidesClass{lion-msc}[2017/03/17 v0.28]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.27}
+\typeout{Leiden Institute of Physics thesis class - version 0.28}
 \typeout{}
 \typeout{Copyright (c) 2014 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
@@ -141,7 +141,7 @@
 \RequirePackage[margin=0cm,font={small,sl},labelfont={bf,sl},tableposition=top,singlelinecheck=false,hypcap]{caption}
 
 % Use US english (default) hyphenation rules and provide dutch as an option
-% 14/05/2019 The USenglish as an option started generating errors. 
+% 14/05/2019 The USenglish as an option started generating errors.
 %            changed the option to english instead hoping for more
 %            stable behavior (M.J.A. de Dood)
 \RequirePackage[dutch,english]{babel}
@@ -306,7 +306,7 @@
 		 \clearpage
 	     \thispagestyle{empty}
 	     \vskip 3em
-	     \textit{\@dedicate}    
+	     \textit{\@dedicate}
 	\fi
 }
 
