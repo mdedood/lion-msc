@@ -19,6 +19,6 @@ latter format should install the Leiden University logo in the right directory.
 
 author: Michiel de Dood <dood@physics.leidenuniv.nl>
 
-Copyright (C) 2014-19 by M.J.A. de Dood
+Copyright (C) 2014-20 by M.J.A. de Dood
 
 
