@@ -48,7 +48,7 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2019/05/15 v0.28]
+\ProvidesClass{lion-msc}[2020/05/27 v0.29]
 \typeout{}
 \typeout{Leiden Institute of Physics thesis class - version 0.28}
 \typeout{}
@@ -257,7 +257,7 @@
             Author :             \hfill {\@author} \\
             Student ID :         \hfill {\@studentid} \\
             Supervisor :         \hfill {\@supervisor} \\
-            2$^{nd}$ corrector : \hfill {\@corrector}
+            Second corrector : \hfill {\@corrector}
             \par
             \vskip 1em
             Leiden, The Netherlands, \@date
