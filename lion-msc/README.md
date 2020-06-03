@@ -16,4 +16,4 @@ The minimal.tex file is an empty template.
 
 author: Michiel de Dood <dood@physics.leidenuniv.nl>
 
-Copyright (C) 2014-17 by M.J.A. de Dood
+Copyright (C) 2014-20 by M.J.A. de Dood
