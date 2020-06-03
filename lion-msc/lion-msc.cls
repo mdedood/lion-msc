@@ -16,8 +16,7 @@
 %                       e-mail: dood@physics.leidenuniv.nl                    %
 %                    telephone: +31-(0)71.527.5929                            %
 %                                                                             %
-% Permission to copy all or part of this work is granted, provided            %
-% that the copies are not made or distributed for resale.                     %
+% Permission to copy all or part of this work is granted.                     %
 %
 % This file may be distributed and/or modified under the
 % conditions of the LaTeX Project Public License, either version 1.3
@@ -48,9 +47,9 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2020/05/27 v0.29]
+\ProvidesClass{lion-msc}[2020/06/03 v0.30]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.29}
+\typeout{Leiden Institute of Physics thesis class - version 0.30}
 \typeout{}
 \typeout{Copyright (c) 2014-2020 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
