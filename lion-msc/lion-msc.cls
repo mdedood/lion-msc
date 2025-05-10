@@ -47,11 +47,11 @@
 
 \typeout{}
 \NeedsTeXFormat{LaTeX2e}
-\ProvidesClass{lion-msc}[2020/06/03 v0.30]
+\ProvidesClass{lion-msc}[2025/05/10 v0.31]
 \typeout{}
-\typeout{Leiden Institute of Physics thesis class - version 0.30}
+\typeout{Leiden Institute of Physics thesis class - version 0.31}
 \typeout{}
-\typeout{Copyright (c) 2014-2020 Michiel de Dood}
+\typeout{Copyright (c) 2014-2025 Michiel de Dood}
 \typeout{Please send questions, comments, additions, complaints to:}
 \typeout{dood@physics.leidenuniv.nl}
 \typeout{}
