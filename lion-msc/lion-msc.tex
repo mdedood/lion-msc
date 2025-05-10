@@ -214,6 +214,13 @@ An alternative is to use the \verb"tocloft" package that offers additional styli
 \renewcommand{\cftchapdotsep}{\cftdotsep}
 \end{verbatim}
 
+\subsubsection{svg figures}
+
+Thanks to Fabian Steinmeyer the svg package is now enabled by default, i.e. loaded inside the lion-msc class. 
+
+The svg package is intended for the automated integration of SVG graphics into LaTeX documents. Therefore the capabilities provided by Inkscape — or more precisely its command line tool — are used to export the text within an SVG graphic to a separate file, which is then rendered by LaTeX. For this purpose the two commands \verb#\includesvg# and \verb#\includeinkscape# are provided which are very similar to the \verb#\includegraphics# command of the graphicx package. 
+
+
 \subsubsection{Subfigures}
 
 It can be quite useful to have multiple figures next to each other. This can be done with the \verb"subcaption" package. (Suggestion by Casper Remeijer)

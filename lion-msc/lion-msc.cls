@@ -120,11 +120,17 @@
 %           This allows to use non-ascii input character, e.g. � instead of \"o
 % 14-03-2017 added latin9 as option to ensure compatibility with LyX for unknown
 %           reasons. Thanks to Vasco Tenner
-\RequirePackage[utf8,latin9]{inputenc}
+% 10-05-2025 I commented it out again as suggested by Fabian Steinmeyer. 
+%			It should make it easier to handle bibliographies with
+%			specialized characters. Morover the use of inputenc should
+%			really by as obsolete as it gets
+%			https://tex.stackexchange.com/questions/370278/is-there-any-reason-to-use-inputenc
+% \RequirePackage[utf8,latin9]{inputenc}
 
 % Font selection
 % \RequirePackage{mathptmx}
 \RequirePackage{mathpazo}   % Just to make it look less like a Word document
+ 
 
 % Special AMS symbols for displaying math
 \RequirePackage{amsmath}
@@ -132,6 +138,9 @@
 
 % insertion of graphics
 \RequirePackage[pdftex]{graphicx}
+
+% 10-05-2025
+\RequirePackage{svg}
 
 % styling of captions using the captions package
 % 28/03/2014 removed the small (0.5cm) margin for the figure captions
